@@ -1,0 +1,186 @@
+body {
+    box-sizing: border-box;
+    font-family: 'Fraunces', serif;
+    width: 1440px;
+}
+
+/* HEADER CSS*/
+
+header {
+    background-image: url('../images/desktop/image-header.jpg');
+    width: 100vw;
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    width: fit-content;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    color: #FFF;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.nav-links > li{
+    padding: 10px;
+    margin: 10px;
+}
+
+li > a {
+    font-family: 'Barlow', sans-serif;
+    text-decoration: none;
+    color: #FFF;
+}
+
+.nav-contact {
+    background-color: #FFF;
+    border-radius: 30px;
+    border-style: none;
+    padding: 20px 35px;
+    margin: 10px;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+/* faire le hover ensuite */
+
+h1 {
+    text-align: center;
+    font-size: 3.5em;
+    text-transform: uppercase;
+    color: #FFF;
+    letter-spacing: 0.2em;
+}
+
+header > img {
+    display: block;
+    margin: auto;
+    margin-top: 150px;
+}
+/* CARD MAIN CSS*/
+
+.card-container {
+    background-color: #FFF;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card-line {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.card-main {
+    padding: 30px;
+    margin: auto;
+}
+
+.card-main_article {
+    width: 30%;
+    text-align: left;
+}
+
+.card-title {
+    color: #24303E;
+    font-size: 2.5em;
+    font-weight: 900;
+}
+
+.card-text {
+    font-family: 'Barlow', sans-serif;
+    color: #808397;
+    font-size: 1.1em;
+    line-height: 1.8em;
+    font-weight: 500;
+}
+
+.card-more {
+    font-size: 0.9em;
+    color: #24303E;
+    text-transform: uppercase;
+    line-height: 1.5em;
+    font-weight: 900;
+    background-color: #FFF;
+    border: none;
+    text-decoration: underline #FAD400 5px ;
+}
+
+.cardBottom {
+    padding: 10px;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+.cardBottom_title {
+    font-size: 1.75em;
+    font-weight: 900;
+    line-height: 2em;
+    color: #24554A;
+    margin-top: 400px;
+}
+
+.cardBottom_text {
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 1.5em;
+    color: #3E7467;
+    margin-bottom: 20px;
+    width: 60%;
+}
+
+.cardBottom_graphic {
+    background-image: url('../images/desktop/image-graphic-design.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cardBottom_photo {
+    background-image: url('../images/desktop/image-photography.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ 
+
+/* FOOTER CSS*/
+
+footer {
+    font-size: 11px; text-align: center; 
+
+}
+
+footer > a {
+    color: hsl(228, 45%, 44%);
+}
