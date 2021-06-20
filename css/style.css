@@ -1,6 +1,7 @@
 body {
     box-sizing: border-box;
     font-family: 'Fraunces', serif;
+    margin: 0;
 }
 
 /* HEADER CSS*/
@@ -70,6 +71,12 @@ li > a {
     font-size: 1.2em;
 }
 
+.nav-contact:hover {
+    cursor: pointer;
+    color: #FFF;
+    background-color: #7fd0ee;
+}
+
 h1 {
     text-align: center;
     font-size: 3.5em;
@@ -98,8 +105,8 @@ header > img {
 
     to {
         margin-top: 300px;
+    }
 }
-
 /* CARD MAIN CSS*/
 
 .card-container {
@@ -113,6 +120,10 @@ header > img {
     width: 100vw;
     display: flex;
     flex-direction: row;
+}
+
+.card-line_stand {
+    flex-direction: row-reverse;
 }
 
 .card-main {
@@ -147,7 +158,11 @@ header > img {
     font-weight: 900;
     background-color: #FFF;
     border: none;
-    text-decoration: underline #FAD400 5px ;
+    text-decoration: underline #FAD400 5px;
+}
+
+.card-more_red {
+    text-decoration: underline #FE7766 5px;
 }
 
 .cardBottom {
@@ -179,6 +194,7 @@ header > img {
     background-image: url('../images/desktop/image-graphic-design.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 .cardBottom_photo {
@@ -284,6 +300,10 @@ h3 {
     font-size: 1.1em;
 }
 
+.prefooter-links:hover {
+    color: #FFF;
+}
+
 .socials {
     display: flex;
     flex-direction: row;
@@ -305,4 +325,117 @@ footer {
 
 footer > a {
     color: hsl(228, 45%, 44%);
+}
+
+/*Responsive for mobile device 375px*/
+@media screen and (max-width: 375px) {
+    
+    header {
+        height: 50vh;
+        width: 110vw;
+    }
+    
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .arrow {
+        animation-name: bounce;
+        animation-delay: 0s;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    
+    @keyframes bounce {
+        from {
+            margin-top: 0;
+        }
+    
+        to {
+            margin-top: 200px;
+        }
+    }
+
+    .nav-container {
+        display: none;
+    }
+
+    .card-container {
+        flex-direction: column;
+    }
+
+    .card-img {
+        width: 110%;
+    }
+
+    .card-line {
+        flex-direction: column-reverse;
+    }
+
+    .card-main_article {
+        width: 90%;
+        text-align: center;
+    }
+
+    .card-title {
+        font-size: 2em;
+    }
+    .card-text {
+        font-size: 1em;
+    }
+
+    .cardBottom, .card-article{
+        width: 100%;
+    }
+
+    .testimonials {
+        padding: 0;
+    }
+
+    .testimonials-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .cardBottom_container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cardBottom {
+        width: 100%;
+        text-align: center;
+    }
+    .cardBottom_graphic {
+        background-position: center;
+    }
+    
+    .cardBottom_photo {
+        background-position: center;
+    }
+
+    .cardBottom_title{
+        text-align: center;
+        width: 80%;
+    }
+    .cardBottom_text {
+        margin: 0;
+        padding: 10px;
+        width: 90%;
+        text-align: center;
+    }
+
+    .bottom {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .bottom-img{
+        width: 50%;
+    }
 }
