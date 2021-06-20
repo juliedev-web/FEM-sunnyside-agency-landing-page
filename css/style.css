@@ -1,7 +1,6 @@
 body {
     box-sizing: border-box;
     font-family: 'Fraunces', serif;
-    width: 1440px;
 }
 
 /* HEADER CSS*/
@@ -173,6 +172,66 @@ header > img {
     background-size: cover;
 }
  
+
+/* Testimonials CSS*/
+.testimonials {
+    width: 100vw;
+    padding: 40px;
+}
+
+h3 {
+    font-size: 1.2em;
+    color: #A7AAAD;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 50px;
+    text-transform: uppercase;
+}
+
+.testimonials-card {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    margin: 40px;
+}
+
+.card-article {
+    text-align: center;
+    width: 40%;
+
+}
+
+.card-article_image {
+    border-radius: 50px;
+    width: 60px;
+    margin: 10px;
+
+}
+
+.card-article_text {
+    font-family: 'Barlow', sans-serif;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #5B636D;
+    line-height: 1.8em;
+    margin: 20px;
+}
+
+.card-article_name {
+    color: #24303E;
+    font-weight: 800;
+    font-size: 1.2em;
+    margin: 40px 0 0 0;
+    padding: 10px;
+}
+
+.card-article_job {
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.9em;
+    font-weight: 600;
+    color: #A7AAAD;
+    margin-top: 0;
+}
 
 /* FOOTER CSS*/
 
