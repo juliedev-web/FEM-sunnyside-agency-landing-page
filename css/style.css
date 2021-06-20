@@ -22,6 +22,10 @@ nav {
     align-items: center;
 }
 
+.burger {
+    display: none;
+}
+
 .logo {
     padding: 10px;
     margin-top: 10px;
@@ -236,7 +240,6 @@ h3 {
     border-radius: 50px;
     width: 60px;
     margin: 10px;
-
 }
 
 .card-article_text {
@@ -331,8 +334,17 @@ footer > a {
 @media screen and (max-width: 375px) {
     
     header {
+        background-image: url('../images/mobile/image-header.jpg');
         height: 50vh;
         width: 110vw;
+    }
+
+    .desktop-nav{
+        display: none;
+    }
+
+    .burger {
+        display: flow;
     }
     
     h1 {
