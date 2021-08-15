@@ -1,3 +1,4 @@
+
 body {
     box-sizing: border-box;
     font-family: 'Fraunces', serif;
@@ -15,22 +16,22 @@ header {
     background-position: center;
 }
 
-nav {
+.desktop-nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
-.burger {
-    display: none;
+.desktop-nav > img {
+    padding: 10px;
+    margin: 10px;
 }
 
-.logo {
-    padding: 10px;
-    margin-top: 10px;
-    margin-left: 10px;
+.menu-burger {
+    visibility: hidden;
 }
+
 
 .nav-container {
     display: flex;
@@ -55,7 +56,7 @@ nav {
 }
 
 .nav-links > li{
-    padding: 10px;
+    padding: 20px;
     margin: 10px;
 }
 
@@ -67,12 +68,11 @@ li > a {
 
 .nav-contact {
     background-color: #FFF;
+    color: #24303E;
     border-radius: 30px;
     border-style: none;
-    padding: 20px 35px;
-    margin: 10px;
     font-weight: 700;
-    font-size: 1.2em;
+    font-size: 0.9em;
 }
 
 .nav-contact:hover {
@@ -115,22 +115,23 @@ header > img {
 
 .card-container {
     background-color: #FFF;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 3;
 }
 
-.card-line {
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
+.card-transform{
+    grid-column: 1;
+    grid-row: 1;
 }
 
-.card-line_stand {
-    flex-direction: row-reverse;
+.card-stand {
+    grid-column: 2;
+    grid-row: 2;
 }
 
 .card-main {
+    display: grid;
     padding: 30px;
     margin: auto;
 }
@@ -169,12 +170,25 @@ header > img {
     text-decoration: underline #FE7766 5px;
 }
 
+.card-img {
+    display: grid;
+}
+
+.card-img_egg{
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.card-img_glass {
+    grid-column: 1;
+    grid-row: 2;
+}
+
 .cardBottom {
+    grid-row: 3;
     padding: 10px;
     margin: auto;
-    width: 50%;
     text-align: center;
-    vertical-align: bottom;
 }
 
 .cardBottom_title {
@@ -194,17 +208,22 @@ header > img {
     width: 60%;
 }
 
-.cardBottom_graphic {
-    background-image: url('../images/desktop/image-graphic-design.jpg');
+.cardBottom-img {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    height: 50vh;
+}
+
+.cardBottom_graphic {
+    grid-column: 1;
+    background-image: url('../images/desktop/image-graphic-design.jpg');
+    
 }
 
 .cardBottom_photo {
+    grid-column: 2;
     background-image: url('../images/desktop/image-photography.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
 }
  
 
@@ -331,7 +350,7 @@ footer > a {
 }
 
 /*Responsive for mobile device 375px*/
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 750px) {
     
     header {
         background-image: url('../images/mobile/image-header.jpg');
@@ -339,16 +358,65 @@ footer > a {
         width: 110vw;
     }
 
-    .desktop-nav{
-        display: none;
+    .desktop-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    .burger {
-        display: flow;
+    .menu-burger {
+        visibility: visible;
+    }
+
+    
+    .nav-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 10px;
+        margin-top: 10px;
+        margin-right: 10px;
+        width: fit-content;
+    }
+    
+    .nav-links {
+        display: none
+        /*display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        list-style: none;
+        color: #FFF;
+        font-size: 1.2em;
+        font-weight: 600;
+        padding: 10px;*/
+    }
+    
+    .nav-links > li{
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    li > a {
+        font-family: 'Barlow', sans-serif;
+        text-decoration: none;
+        color: #FFF;
+    }
+    
+    .nav-contact {
+        display: none;
+        background-color: #FFF;
+        color: #24303E;
+        border-radius: 30px;
+        border-style: none;
+        font-weight: 700;
+        font-size: 0.9em;
     }
     
     h1 {
         font-size: 2.5em;
+        
     }
 
     .arrow {
@@ -369,16 +437,13 @@ footer > a {
         }
     }
 
-    .nav-container {
-        display: none;
-    }
-
     .card-container {
         flex-direction: column;
     }
 
     .card-img {
         width: 110%;
+
     }
 
     .card-line {
@@ -423,15 +488,11 @@ footer > a {
         width: 100%;
         text-align: center;
     }
-    .cardBottom_graphic {
-        background-position: center;
-    }
-    
-    .cardBottom_photo {
+    .cardBottom_graphic, .cardBottom_photo {
         background-position: center;
     }
 
-    .cardBottom_title{
+    .cardBottom_title {
         text-align: center;
         width: 80%;
     }
